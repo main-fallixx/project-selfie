@@ -46,7 +46,7 @@ export default function ContactPage() {
       `Message: ${quote.message || '-'}`
     ];
     const message = encodeURIComponent(lines.join('\n'));
-    window.open(`https://wa.me/919043717464?text=${message}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/9188838616123?text=${message}`, '_blank', 'noopener,noreferrer');
     setSubmitted(true);
     setForm(initialState);
   };
@@ -55,12 +55,12 @@ export default function ContactPage() {
     <section className="section page-intro-gap">
       <div className="container contact-layout enhanced-contact-layout">
         <aside className="info-card hover-rise glow-card">
-          <span className="eyebrow">Selected experiences</span>
-          <h1>{cartItems.length} product{cartItems.length === 1 ? '' : 's'} in your quote</h1>
-          <p>Review the products below. When you continue, the quote request is stored locally for admin review and also sent to WhatsApp.</p>
+          <span className="eyebrow">Contact Selfie Petti — Photo Booth Rental in Tirunelveli & Madurai</span>
+          <h1>{cartItems.length} product{cartItems.length === 1 ? '' : 's'} in your quote request</h1>
+          <p>Review your selected photo booths and event entertainment below. When you continue, your quote request is saved for our team to review and also sent directly to us on WhatsApp for a fast response.</p>
           <div className="quote-review-list">
             {cartItems.length === 0 ? (
-              <div className="empty-cart">No products selected yet. Add items from Rent a Device page.</div>
+              <div className="empty-cart">No photo booths or event experiences selected yet. Browse our Rent a Device page to add mirror photo booths, AI photo booths, 360 video booths and more.</div>
             ) : (
               cartItems.map((item) => (
                 <div key={item.id} className="quote-review-item">
@@ -74,8 +74,8 @@ export default function ContactPage() {
             )}
           </div>
           <div className="summary-box">
-            <strong>Review cart</strong>
-            <p>{summaryText || 'Your selected products will appear here automatically.'}</p>
+            <strong>Your quote summary</strong>
+            <p>{summaryText || 'Your selected photo booths and event games will appear here automatically.'}</p>
           </div>
           <ul className="feature-list compact-features">
             {contactHighlights.map((item) => <li key={item}>{item}</li>)}
@@ -83,9 +83,9 @@ export default function ContactPage() {
         </aside>
 
         <form className="form-card hover-rise" onSubmit={handleSubmit}>
-          <span className="eyebrow">Your details</span>
-          <h2>Continue to quote form</h2>
-          {submitted && <div className="success-note">Quote request submitted. It has been saved locally for admin review and opened in WhatsApp.</div>}
+          <span className="eyebrow">Get Your Free Photo Booth Quote</span>
+          <h2>Tell us about your event in Tamil Nadu</h2>
+          {submitted && <div className="success-note">Your quote request has been submitted. It's saved for our team to review and has opened in WhatsApp so we can confirm availability quickly.</div>}
 
           <div className="form-section-title">01 <span>Your details</span></div>
           <div className="form-grid">
@@ -110,12 +110,12 @@ export default function ContactPage() {
             </label>
           </div>
 
-          <div className="form-section-title">02 <span>The event</span></div>
+          <div className="form-section-title">02 <span>Your event</span></div>
           <div className="form-grid">
             <label>
               Event type *
               <select value={form.eventType} onChange={(e) => setForm({ ...form, eventType: e.target.value })} required>
-                <option value="">Select event</option>
+                <option value="">Select your event type</option>
                 {eventTypes.map((type) => <option key={type} value={type}>{type}</option>)}
               </select>
             </label>
@@ -127,10 +127,10 @@ export default function ContactPage() {
 
           <label>
             Message
-            <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Venue, guest count, timing and anything else we should know..." />
+            <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Venue, guest count, timing and anything else we should know to plan your photo booth experience..." />
           </label>
 
-          <button className="btn btn-primary submit-btn" type="submit">Submit quote request</button>
+          <button className="btn btn-primary submit-btn" type="submit">Submit Quote Request</button>
         </form>
       </div>
     </section>

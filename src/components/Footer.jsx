@@ -6,15 +6,15 @@ export default function Footer() {
       <div className="container footer-shell">
         <div className="footer-brand-block">
           <div className="footer-logo-row">
-            <img src="/assets/images/logo.jpg" alt="SelfiePetti logo" />
+            <img src="/assets/images/logo.jpg" alt="Selfie Petti - Premium Photo Booth Rental & Event Entertainment Company in Tirunelveli, Tamil Nadu" />
             <div>
-              <h3>SelfiePetti</h3>
-              <p>Premium event entertainment, photobooths, robot booth experiences and high-energy game attractions across Tamil Nadu.</p>
+              <h3>Selfie Petti</h3>
+              <p>Premium photo booth rental and event entertainment company based in Tirunelveli, offering mirror photo booths, AI photo booths, 360 video booths and high-energy game attractions for weddings, corporate events and celebrations across Tamil Nadu.</p>
             </div>
           </div>
           <div className="footer-action-row">
-            <NavLink className="btn btn-primary" to="/contact">Start a quote</NavLink>
-            <NavLink className="btn btn-ghost footer-ghost" to="/products">Browse products</NavLink>
+            <NavLink className="btn btn-primary" to="/contact">Get a Free Quote</NavLink>
+            <NavLink className="btn btn-ghost footer-ghost" to="/products">Browse Photo Booths</NavLink>
           </div>
         </div>
 
@@ -31,27 +31,27 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-card">
-            <h4>Popular experiences</h4>
+            <h4>Popular Photo Booths & Experiences</h4>
             <ul>
-              <li>Mirror Selfie Booth</li>
-              <li>Robot Booth</li>
+              <li>Mirror Photo Booth</li>
+              <li>AI Photo Booth</li>
               <li>360 Video Booth</li>
               <li>Bull Rider</li>
               <li>Dragon Egg Gel Blaster</li>
             </ul>
           </div>
           <div className="footer-card">
-            <h4>Quick contact</h4>
+            <h4>Quick Contact</h4>
             <ul>
               <li><a href="tel:+919043717464">+91 90437 17464</a></li>
               <li><a href="mailto:hello@selfiepetti.com">hello@selfiepetti.com</a></li>
-              <li>Tamil Nadu service coverage</li>
-              <li>WhatsApp quote support through robot pet</li>
+              <li>Serving Tirunelveli, Madurai, Thoothukudi, Kanyakumari, Nagercoil, Tenkasi, Sivakasi and Tamil Nadu</li>
+              <li>WhatsApp quote support available</li>
             </ul>
           </div>
         </div>
       </div>
-      <div className="container footer-bottom">© 2026 SelfiePetti. Premium responsive React website with product-led quote cart and hidden local admin dashboard.</div>
+      <div className="container footer-bottom">© 2026 Selfie Petti. Premium photo booth rental and event entertainment company in Tirunelveli, Tamil Nadu.</div>
     </footer>
   );
 }

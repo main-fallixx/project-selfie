@@ -21,14 +21,14 @@ export default function HomePage() {
             <HeroRectangle className="rect-four float-left slow" />
             <HeroRectangle className="rect-five float-right" />
             <div className="hero-content">
-              <p className="hero-overline">SELFIEPETTI EVENT EXPERIENCES</p>
+              <p className="hero-overline">SELFIE PETTI — PREMIUM PHOTO BOOTH & EVENT ENTERTAINMENT</p>
               <h1>Fun • Games •<br />Memories</h1>
-              <p className="hero-copy">Photobooths, 360-degree video, arcade and carnival games for celebrations across Tamil Nadu.</p>
+              <p className="hero-copy">Selfie Petti is a premium photo booth rental and event entertainment company based in Tirunelveli, Tamil Nadu, serving weddings, corporate events, birthdays and brand activations across Madurai, Thoothukudi, Kanyakumari, Nagercoil, Tenkasi, Sivakasi and South India. From mirror photo booths and 360 video booths to AI photo booths, arcade and carnival games, we bring interactive, memorable experiences to every celebration.</p>
             </div>
             <div className="hero-dock">
-              <NavLink className="dock-btn dock-dark" to="/products">Rent a device</NavLink>
-              <NavLink className="dock-btn dock-pink" to="/contact">Get proposal</NavLink>
-              <a className="dock-btn dock-green" href="https://wa.me/919043717464" target="_blank" rel="noreferrer">WhatsApp</a>
+              <NavLink className="dock-btn dock-dark" to="/products">Rent a Photo Booth</NavLink>
+              <NavLink className="dock-btn dock-pink" to="/contact">Get a Free Proposal</NavLink>
+              <a className="dock-btn dock-green" href="https://wa.me/919043717464" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
             </div>
           </div>
         </div>
@@ -48,10 +48,36 @@ export default function HomePage() {
       <section className="section">
         <div className="container section-head-wrap">
           <div>
-            <span className="eyebrow">Experiences</span>
-            <h2>Professional event attractions for every kind of celebration.</h2>
+            <span className="eyebrow">Our Photo Booth & Event Entertainment Services</span>
+            <h2>Premium photo booth rentals and interactive event entertainment for every celebration in Tamil Nadu.</h2>
           </div>
-          <NavLink className="btn btn-ghost" to="/products">Open products</NavLink>
+          <NavLink
+  to="/products"
+  style={{
+    display: "inline-flex",
+    alignItems: "center",
+    whiteSpace: "nowrap",
+    padding: "10px 20px",
+    borderRadius: "8px",
+    background: "#222",
+    color: "#fff",
+    textDecoration: "none",
+    transition: "all 0.3s ease",
+  }}
+  onMouseEnter={(e) => {
+    e.target.style.background =
+      "linear-gradient(90deg, #ec4899, #3b82f6)";
+    e.target.style.transform = "scale(1.05)";
+    e.target.style.boxShadow = "0 8px 20px rgba(59,130,246,0.4)";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.background = "#222";
+    e.target.style.transform = "scale(1)";
+    e.target.style.boxShadow = "none";
+  }}
+>
+  View All Photo Booths & Games
+</NavLink>
         </div>
         <div className="container card-grid three-up">
           {services.slice(0, 6).map((service) => (
@@ -75,9 +101,9 @@ export default function HomePage() {
       <section className="section">
         <div className="container split-grid">
           <div className="glow-panel hover-rise">
-            <span className="eyebrow">Showcase reel</span>
-            <h2>Video-led storytelling for instant attraction.</h2>
-            <p>Switch between photobooth, robot booth, arcade and action-led moments. The section is responsive across desktop, tablet and mobile automatically.</p>
+            <span className="eyebrow">Watch It In Action</span>
+            <h2>See our mirror photo booth, AI photo booth and 360 video booth in real events.</h2>
+            <p>Switch between our photo booth, robot booth, arcade and action-led moments to see why Selfie Petti is a trusted photo booth company for weddings, corporate events and brand activations. This section adjusts automatically across desktop, tablet and mobile.</p>
             <div className="video-shell large">
               <video key={activeVideo} autoPlay muted loop controls playsInline preload="metadata">
                 <source src={activeVideo} type="video/mp4" />
@@ -97,14 +123,14 @@ export default function HomePage() {
             </div>
           </div>
           <div className="why-card hover-rise">
-            <span className="eyebrow">Why choose us</span>
-            <h2>More fun. Less effort.</h2>
+            <span className="eyebrow">Why Choose Selfie Petti</span>
+            <h2>Premium photo booth experiences, delivered with less effort on your part.</h2>
             <div className="reason-stack">
-              <div><strong>Complete event support</strong><p>From setup to guest guidance, every experience is designed to run smoothly.</p></div>
-              <div><strong>Product-led booking flow</strong><p>Guests can pick experiences, add them to a quote cart and continue directly to a proper form.</p></div>
-              <div><strong>Responsive by default</strong><p>The layout adapts across mobile, tablet and desktop automatically.</p></div>
+              <div><strong>Complete event support</strong><p>From setup to guest guidance, our team manages every photo booth and event entertainment experience from start to finish, so your event runs smoothly.</p></div>
+              <div><strong>Product-led booking flow</strong><p>Browse our photo booths and event games, add your favourites to a quote cart, and continue directly to a simple enquiry form — no back-and-forth needed.</p></div>
+              <div><strong>Responsive by default</strong><p>Our website and booking experience adapt automatically across mobile, tablet and desktop, so planning your event is easy from anywhere.</p></div>
             </div>
-            <NavLink className="btn btn-primary" to="/contact">Plan your event</NavLink>
+            <NavLink className="btn btn-primary" to="/contact">Plan Your Event</NavLink>
           </div>
         </div>
       </section>
@@ -112,15 +138,15 @@ export default function HomePage() {
       <section id="reviews" className="section review-section">
         <div className="container section-head-wrap">
           <div>
-            <span className="eyebrow">Client stories</span>
-            <h2>Good experiences. Great reactions.</h2>
+            <span className="eyebrow">Client Stories</span>
+            <h2>Real events, real reactions — see why clients across Tamil Nadu trust Selfie Petti.</h2>
           </div>
         </div>
         <div className="container card-grid three-up">
           {reviews.map((review) => (
             <article key={review.name} className="review-card hover-rise glow-card">
               <div className="stars">★★★★★</div>
-              <p className="review-quote">“{review.quote}”</p>
+              <p className="review-quote">"{review.quote}"</p>
               <div className="review-author">
                 <strong>{review.name}</strong>
                 <span>{review.type}</span>
@@ -132,12 +158,12 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container cta-panel hover-rise">
-          <span className="eyebrow">Let’s create something memorable</span>
-          <h2>Move from attraction to enquiry in a faster, cleaner and more professional way.</h2>
-          <p>Browse devices, build a quote cart, send your details and keep the hidden admin page separate from the public website.</p>
+          <span className="eyebrow">Let's Create Something Memorable</span>
+          <h2>Book Tamil Nadu's premium photo booth and event entertainment company today.</h2>
+          <p>Browse our photo booths and event games, build your quote cart, and send us your event details — a faster, cleaner and more professional way to book event entertainment in Tirunelveli, Madurai and across South India.</p>
           <div className="button-row">
-            <NavLink className="btn btn-primary" to="/products">Rent a device</NavLink>
-            <NavLink className="btn btn-ghost" to="/contact">Get proposal</NavLink>
+            <NavLink className="btn btn-primary" to="/products">Rent a Photo Booth</NavLink>
+            <NavLink className="btn btn-ghost" to="/contact">Get a Free Proposal</NavLink>
           </div>
         </div>
       </section>

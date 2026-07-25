@@ -1,16 +1,9 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
 import RobotPet from './components/RobotPet';
-import HomePage from './pages/HomePage';
-import ServicesPage from './pages/ServicesPage';
-import ProductsPage from './pages/ProductsPage';
-import GalleryPage from './pages/GalleryPage';
-import BlogPage from './pages/BlogPage';
-import ContactPage from './pages/ContactPage';
-import AdminPage from './pages/AdminPage';
 import { CartProvider } from './context/CartContext';
 
 function ScrollToTop() {
@@ -21,34 +14,18 @@ function ScrollToTop() {
   return null;
 }
 
-function AppShell() {
+export default function App({ children }) {
   const location = useLocation();
   const isAdmin = location.pathname === '/admin-dashboard';
 
   return (
-    <>
+    <CartProvider>
       <Preloader />
       <ScrollToTop />
       {!isAdmin && <Header />}
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/admin-dashboard" element={<AdminPage />} />
-      </Routes>
+      {children}
       {!isAdmin && <RobotPet />}
       {!isAdmin && <Footer />}
-    </>
-  );
-}
-
-export default function App() {
-  return (
-    <CartProvider>
-      <AppShell />
     </CartProvider>
   );
 }

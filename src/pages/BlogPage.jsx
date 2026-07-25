@@ -4,9 +4,9 @@ export default function BlogPage() {
   return (
     <section className="section page-intro-gap">
       <div className="container page-copy page-copy-wide">
-        <span className="eyebrow">Blog</span>
-        <h1>Fresh ideas for premium event entertainment, guest engagement and stronger enquiry-focused presentation.</h1>
-        <p>This blog exists only as its own dedicated page and not on the homepage, keeping your front page cleaner while still giving the brand a professional content section.</p>
+        <span className="eyebrow">Selfie Petti Blog</span>
+        <h1>Photo booth tips, event entertainment ideas and guest engagement insights from Tamil Nadu's premium photo booth company.</h1>
+        <p>Explore expert advice on choosing the right photo booth for weddings and corporate events, ideas for brand activations, and tips to make your next celebration in Tirunelveli, Madurai, Thoothukudi, Kanyakumari, Nagercoil, Tenkasi, Sivakasi or anywhere in Tamil Nadu unforgettable.</p>
       </div>
       <div className="container card-grid three-up blog-grid-page">
         {blogPosts.map((post) => (

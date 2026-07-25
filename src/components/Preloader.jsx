@@ -30,9 +30,9 @@ export default function Preloader() {
   return (
     <div className={`preloader ${progress === 100 ? 'fade-out' : ''}`}>
       <div className="preloader-inner">
-        <img className="preloader-logo" src="/assets/images/logo.jpg" alt="SelfiePetti logo" />
-        <div className="preloader-title">SELFIEPETTI</div>
-        <div className="preloader-subtitle">PREPARING YOUR EXPERIENCE</div>
+        <img className="preloader-logo" src="/assets/images/logo.jpg" alt="Selfie Petti - Premium Photo Booth Rental & Event Entertainment" />
+        <div className="preloader-title">SELFIE PETTI</div>
+        <div className="preloader-subtitle">PREPARING YOUR PHOTO BOOTH EXPERIENCE</div>
         <div className="progress-track">
           <div className="progress-fill" style={{ width: `${progress}%` }} />
           <div className="progress-robot" style={{ left: `calc(${Math.max(progress, 8)}% - 38px)` }}>
