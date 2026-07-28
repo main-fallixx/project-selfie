@@ -391,7 +391,7 @@ button { cursor: pointer; }
 .hero-dock {
   position: absolute;
   left: 50%;
-  bottom: -18px;
+  bottom: 5px;
   transform: translateX(-50%);
   width: min(92%, 480px);
   padding: 0.75rem;
