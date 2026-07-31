@@ -997,7 +997,7 @@ select:focus {
     transform:rotate(-45deg);
 }
 .mobile-menu {
-  position: fixed;
+  position: absolute;
   inset: 0;
   background: #0a0a14;
   display: flex;
