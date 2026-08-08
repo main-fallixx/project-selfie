@@ -46,7 +46,7 @@ export default function ContactPage() {
       `Message: ${quote.message || '-'}`
     ];
     const message = encodeURIComponent(lines.join('\n'));
-    window.open(`https://wa.me/9188838616123?text=${message}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/918883861612?text=${message}`, '_blank', 'noopener,noreferrer');
     setSubmitted(true);
     setForm(initialState);
   };

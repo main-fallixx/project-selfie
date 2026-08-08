@@ -8,10 +8,10 @@ export const navItems = [
 ];
 
 export const heroStats = [
-  { title: 'Premium Photo Booth Setup', text: 'Clean, premium visual presentation with mobile-first responsiveness for every photo booth rental.' },
-  { title: 'Fast Enquiries', text: 'Quote-first flow that moves visitors from attraction to action quickly.' },
-  { title: 'Product-led Booking', text: 'Browse our photo booth and event games catalogue with add-to-cart and quote journey.' },
-  { title: 'All Events, All Tamil Nadu', text: 'Weddings, colleges, corporate events, brand activations and private parties across Tirunelveli, Madurai and Tamil Nadu.' }
+  { title: '40+ Unique Experiences', text: 'Photo booths, VR games, AR games, arcade challenges & interactive entertainment.' },
+  { title: 'Entertainment That Gets People Involved', text: 'Interactive experiences designed to attract guests, create excitement and keep the crowd engaged.' },
+  { title: 'Built for Every Celebration', text: 'From intimate parties to large weddings, corporate events, college functions and brand activations.' },
+  { title: 'One Partner. Complete Event Entertainment.', text: 'Choose multiple experiences from one catalogue with professional setup, support and event coordination.' }
 ];
 
 export const services = [
@@ -56,16 +56,24 @@ export const services = [
     description: 'Fast reaction-based gameplay that keeps guests engaged with one-more-try energy at weddings, corporate events and college fests.',
     features: ['Short and addictive gameplay', 'Fun for all ages', 'Works well in compact spaces'],
     video: '/assets/videos/experience-1.mp4'
-  },
-  {
-    title: 'Dragon Egg Gel Blaster',
-    tag: 'Action-packed experience',
-    description: 'A visual and energetic gel blaster attraction with dynamic target-play appeal, perfect for high-energy events and brand activations.',
-    features: ['Action-oriented gameplay', 'Strong visual impact', 'Great for youth-heavy events'],
-    video: '/assets/videos/experience-4.mp4'
   }
 ];
-
+export const googleReviews = [
+  { slug: "adv-umadevi-achari", name: "Adv. Umadevi Achari", type: "Local Guide · 120 reviews", stars: 5, quote: "Amazing experience for my wedding — the innovative robot they brought added a fun, futuristic touch. Professional, creative, and attentive throughout." },
+  { slug: "subiksha-ram", name: "Subiksha Ram", type: "9 reviews · 8 photos", stars: 5, quote: "The mirror selfie booth and 360 spin video were enjoyed by every age group. The team was extremely patient and managed the crowd exceptionally well." },
+  { slug: "lakshmanan", name: "Lakshmanan", type: "6 reviews · 3 photos", stars: 5, quote: "Photobooth was awesome to work with! Super responsive, one of the best vendors we had — every guest loved taking pictures. Memories forever." },
+  { slug: "abinas-shankar", name: "Abinas Shankar", type: "1 review", stars: 5, quote: "The magazine cover setup instantly grabbed everyone's attention. Sharp, well-lit, professional photo quality with quick prints and digital copies." },
+  { slug: "muralidharan-gurusamy", name: "Muralidharan Gurusamy", type: "6 reviews", stars: 5, quote: "All our dealers really enjoyed the Selfie Petti, 360° camera, and virtual video. A truly different experience — highly recommended." },
+  { slug: "raechel-annisha-angel", name: "Raechel Annisha Angel", type: "Local Guide · 19 reviews", stars: 5, quote: "Really memorable printed photos at a wedding. The team was friendly and patient with all our requests, and the results were lovely." },
+  { slug: "guneseelan-selvaraju", name: "Gunaseelan Selvaraju", type: "Local Guide · 11 reviews", stars: 5, quote: "360 video booth, super entertainment and selfie booth events — very nice. Creative ideas and price affordable." },
+  { slug: "raphael-daniels", name: "Raphael Daniels", type: "Local Guide · 16 reviews", stars: 5, quote: "Used Selfie Petti for my son's 1st birthday. It really rocked the show and gave lots of crazy memories. Strongly recommended!" },
+  { slug: "cetric-elaens", name: "Cetric Elaens", type: "Local Guide · 13 reviews", stars: 5, quote: "Booked Selfie Petti for my wedding. Good arrangement, zero hassle to manage, and great customer service. My whole family enjoyed it." },
+  { slug: "kansi-ram", name: "Kansi Ram", type: "3 reviews", stars: 5, quote: "A wonderful entertainer at my sister's reception — people of all ages loved it. The team was calm and patient with the crowd. Truly memorable." },
+  { slug: "jay-creation", name: "Jay Creation", type: "5 reviews · 2 photos", stars: 5, quote: "I personally recommend Selfie Petti to friends and family — the best option to add a blast to weddings, birthdays, and parties." },
+  { slug: "kevin-issac", name: "Kevin Isaac", type: "1 review", stars: 5, quote: "A great experience using Selfie Petti's VR setup — worth the investment. Professional team, and the guests loved the VR game." },
+  { slug: "ganesh-subramanian", name: "Ganesh Subramanian", type: "Local Guide · 7 reviews", stars: 5, quote: "Wonderful entertainment — had the chance to experience both the photo booth and VR games. Both were fun-filled memories." },
+  { slug: "mariappan-r", name: "Mariappan R", type: "10 reviews · 1 photo", stars: 5, quote: "Shows good, memorable moments. Really enjoyed and loved it — once you try it, you never forget. #SelfiePetti" },
+];
 export const products = [
   {
   id: 'magazine-booth',
@@ -568,4 +576,42 @@ export const eventTypes = [
   'Charity Event',
   'Luxury Event',
   'Destination Wedding'
+];
+// src/data/siteData.js
+// src/data/siteData.js
+
+export const trustedLogos = [
+  { id: 1, name: "Agape Events", image: "/assets/Logos/Agape Events.webp" },
+  { id: 2, name: "AKB School", image: "/assets/Logos/AKB School.webp" },
+  { id: 3, name: "AND Studios", image: "/assets/Logos/AND studios.webp" },
+  { id: 4, name: "BAI Association", image: "/assets/Logos/Bai Association.webp" },
+  { id: 5, name: "Cauvery Hospital", image: "/assets/Logos/Cauvery Hospital.webp" },
+  { id: 6, name: "D Cube", image: "/assets/Logos/D cube.webp" },
+  { id: 7, name: "Derik", image: "/assets/Logos/Derik.webp" },
+  { id: 8, name: "Devi Mini Hall", image: "/assets/Logos/Devi Minihall.webp" },
+  { id: 9, name: "Gen-Z Studio", image: "/assets/Logos/Gen-Z studio.webp" },
+  { id: 10, name: "Glory Decorations", image: "/assets/Logos/Glory Decorations.webp" },
+  { id: 11, name: "God's Touch Event", image: "/assets/Logos/God's Touch Event.webp" },
+  { id: 12, name: "Happy Events", image: "/assets/Logos/Happy Events.webp" },
+  { id: 13, name: "Iris Events", image: "/assets/Logos/Iris Events.webp" },
+  { id: 14, name: "Jam Junixon", image: "/assets/Logos/Jam Junixon.webp" },
+  { id: 15, name: "Just Click Studio", image: "/assets/Logos/Just Click Studio.webp" },
+  { id: 16, name: "Larsen & Toubro", image: "/assets/Logos/Larsen&Toubro_logo.webp" },
+  { id: 17, name: "Namma Veettu Kalyanam", image: "/assets/Logos/Namma Vettu kalyanam.webp" },
+  { id: 18, name: "Nellai Photobooth", image: "/assets/Logos/Nellai Photobooth.webp" },
+  { id: 19, name: "Nile Events", image: "/assets/Logos/Nile Events.webp" },
+  { id: 20, name: "PhotoPetti", image: "/assets/Logos/Photopetti.webp" },
+  { id: 21, name: "Selvarani", image: "/assets/Logos/Selvarani.webp" },
+  { id: 22, name: "Sikiram Oil", image: "/assets/Logos/Sikiram oil.webp" },
+  { id: 23, name: "Siva Event", image: "/assets/Logos/Siva Event.webp" },
+  { id: 24, name: "SM Home Style", image: "/assets/Logos/SM home style.webp" },
+  { id: 25, name: "Sridhar Bharathy", image: "/assets/Logos/Sridhar Bharathy.webp" },
+  { id: 26, name: "Strawberry Engineering", image: "/assets/Logos/Strawberry Engineering.webp" },
+  { id: 27, name: "Studio Creations", image: "/assets/Logos/Studio Creations.webp" },
+  { id: 28, name: "Suryan FM", image: "/assets/Logos/Suryan Fm.webp" },
+  { id: 29, name: "The Brilly Dairies", image: "/assets/Logos/The Brilly Dairies.webp" },
+  { id: 30, name: "Vaiyam Events", image: "/assets/Logos/Vaiyam Events.webp" },
+  { id: 31, name: "Vel Vidhalaya", image: "/assets/Logos/Vel Vidhalaya.webp" },
+  { id: 32, name: "Welcome Studio", image: "/assets/Logos/Welcome Studio.webp" },
+  { id: 33, name: "Yes Builders", image: "/assets/Logos/Yes Builders.webp" },
 ];

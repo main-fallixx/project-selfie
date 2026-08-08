@@ -13,12 +13,7 @@ export default function Header() {
       <div className="container nav-shell">
 
         <NavLink to="/" className="brand">
-          <img src="/assets/images/logo.jpg" alt="Selfie Petti - Premium Photo Booth Rental & Event Entertainment in Tirunelveli, Tamil Nadu" />
-
-          <div>
-            <span className="brand-name">Selfie Petti</span>
-            <span className="brand-tag">Fun • Games • Memories</span>
-          </div>
+          <img src="/assets/images/Logo.png" alt="Selfie Petti - Premium Photo Booth Rental & Event Entertainment in Tirunelveli, Tamil Nadu" />
         </NavLink>
 
         <nav className={`site-nav ${menuOpen ? "open" : ""}`}>

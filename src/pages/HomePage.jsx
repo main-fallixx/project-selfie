@@ -1,7 +1,17 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { heroStats, services, showcaseTabs, reviews } from '../data/siteData';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import {
+  heroStats,
+  services,
+  showcaseTabs,
+  reviews,
+  trustedLogos,
+} from "../data/siteData";
 
+import TrustedLogos from "../components/TrustedLogos";
+// ...inside the JSX, e.g. right after the stats-band section:
+import GoogleReviews from "../components/GoogleReviews";
+import { googleReviews } from "../data/siteData";
 function HeroRectangle({ className }) {
   return <span className={`hero-rectangle ${className}`} aria-hidden="true" />;
 }
@@ -11,15 +21,17 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="hero-home section">
+<section className="hero-home section">
         <div className="container">
           <div className="hero-box">
-            <div className="hero-lines" />
-            <HeroRectangle className="rect-one float-right" />
-            <HeroRectangle className="rect-two float-left" />
-            <HeroRectangle className="rect-three float-right slow" />
-            <HeroRectangle className="rect-four float-left slow" />
-            <HeroRectangle className="rect-five float-right" />
+            <div className="hero-clip">
+              <div className="hero-lines" />
+              <HeroRectangle className="rect-one float-right" />
+              <HeroRectangle className="rect-two float-left" />
+              <HeroRectangle className="rect-three float-right slow" />
+              <HeroRectangle className="rect-four float-left slow" />
+              <HeroRectangle className="rect-five float-right" />
+            </div>
             <div className="hero-content">
               <p className="hero-overline">SELFIE PETTI — PREMIUM PHOTO BOOTH & EVENT ENTERTAINMENT</p>
               <h1>Fun • Games •<br />Memories</h1>
@@ -33,7 +45,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <section className="section stats-band">
         <div className="container card-grid four-up">
           {heroStats.map((item) => (
@@ -134,27 +145,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<TrustedLogos logos={trustedLogos} />
 
-      <section id="reviews" className="section review-section">
-        <div className="container section-head-wrap">
-          <div>
-            <span className="eyebrow">Client Stories</span>
-            <h2>Real events, real reactions — see why clients across Tamil Nadu trust Selfie Petti.</h2>
-          </div>
-        </div>
-        <div className="container card-grid three-up">
-          {reviews.map((review) => (
-            <article key={review.name} className="review-card hover-rise glow-card">
-              <div className="stars">★★★★★</div>
-              <p className="review-quote">"{review.quote}"</p>
-              <div className="review-author">
-                <strong>{review.name}</strong>
-                <span>{review.type}</span>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+  <GoogleReviews reviews={googleReviews} />
 
       <section className="section">
         <div className="container cta-panel hover-rise">
