@@ -452,3 +452,137 @@
   font-size: 0.82rem;
   color: #d0d0d6;
 }
+/* ============================================
+   RESPONSIVE FIX PATCH — add this AFTER your
+   existing admin.css (or merge it in).
+   ============================================ */
+
+/* 1. THE MAIN BUG: missing box-sizing reset.
+   Without this, padding is added on top of width,
+   elements overflow their parent, and the browser
+   can end up only rendering/laying out part of the
+   page width (what you're seeing as the left-half
+   cutoff). This single rule fixes almost all of it. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 2. Make sure the shell always fills the viewport width */
+.admin-shell {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 3. Inputs/selects/textareas must respect their container width */
+.admin-input,
+.admin-select,
+.admin-textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 4. Topbar had a negative top margin (-1.5rem) which can cause
+   overlap/clipping on short or mobile viewports — safer to scope it. */
+.admin-topbar {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* 5. Tabs: allow horizontal scroll instead of overflowing/wrapping oddly on mobile */
+.admin-tabs {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap;
+}
+
+.admin-tab {
+  flex: 0 0 auto;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+@media (max-width: 900px) {
+  .admin-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-shell {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-topbar {
+    margin: 0 auto 1.25rem;
+    justify-content: flex-start;
+  }
+
+  .admin-user-chip {
+    flex-wrap: wrap;
+  }
+
+  .admin-panel {
+    padding: 1.25rem;
+  }
+
+  .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-btn-row {
+    flex-direction: column;
+  }
+
+  .admin-btn-row .admin-btn {
+    width: 100%;
+  }
+
+  .admin-panel-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-stat-value {
+    font-size: 1.7rem;
+  }
+
+  .admin-login-card {
+    padding: 1.25rem;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 0.6rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .admin-cell-truncate {
+    max-width: 120px;
+  }
+}
